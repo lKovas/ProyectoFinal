@@ -20,7 +20,7 @@ export class DungeonMasterComponent implements OnInit {
   }
   ngOnInit(): void {
     this.dataService.getImages().subscribe(data => {
-      this.displayedCharacter = data.find((character: { name: string; }) => character.name === 'Dungeon Master Kovas');
+      this.displayedCharacter = data.find((character: { name: string; }) => character.name === 'Kovas Leal Rojas');
     });
   }
 

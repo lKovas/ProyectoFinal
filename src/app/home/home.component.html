@@ -1,17 +1,30 @@
-
-<div class="container mt-5"  *ngFor="let image of joke;">
+<div class="container mt-5">
     <div class="row">
         <div class="col-md-12">
             <div class="card">
                 <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="../../assets/Image/chucknorris.jpg" class="img-fluid rounded-start" alt="Image">
+                    </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <h5 class="card-title">{{ image.name}}</h5>
-                            <p class="card-text">
-                                {{ image.value}}
+                            <p *ngIf="joke != null" class="card-text">
+                                {{ joke.value}}
                             </p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-12">
+                    <ng-container *ngFor="let category of categories">
+                        <div class="custom-btn-container">
+                            <button (click)="searchJoke(category)" type="button"
+                                class="btn btn-primary">{{category}}</button>
+                        </div>
+                    </ng-container>
                 </div>
             </div>
         </div>

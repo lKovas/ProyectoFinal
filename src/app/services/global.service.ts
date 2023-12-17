@@ -18,8 +18,7 @@ export class GlobalService {
   
 
   getJokeRandom(): Observable<any> {
-    return this.http
-      .get(this.apiURL + '/random');
+    return this.http.get(this.apiURL + '/random');
   }
 
   getCategories(): Observable<any> {
@@ -28,8 +27,8 @@ export class GlobalService {
   }
   getByCategory(category:string): Observable<any> {
     return this.http
-    .get(this.apiURL + '/search?query={'+ category +'}');
-  }
+    .get(this.apiURL + '/search?query='+ category );
+  }
+
+
 }
-
-
