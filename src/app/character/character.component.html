@@ -1,0 +1,22 @@
+
+<div class="container mt-5"  *ngFor="let image of characters;">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="{{image.fullimg}}" class="img-fluid rounded-start" alt="Image">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ image.name}}</h5>
+                            <p class="card-text">
+                                {{ image.description}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
